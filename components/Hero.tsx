@@ -173,14 +173,16 @@ function HeroShowcase() {
           </div>
         </div>
 
-        {/* tiny floating callouts */}
+        {/* tiny floating callouts — positioned well outside the panel */}
         <FloatingCallout
-          className="hidden md:flex -left-10 top-20"
+          className="hidden lg:flex top-6"
+          style={{ insetInlineStart: '-9.5rem' }}
           dot="violet"
           text={locale === 'he' ? 'Face ID פעיל' : 'Face ID active'}
         />
         <FloatingCallout
-          className="hidden md:flex -right-10 bottom-20"
+          className="hidden lg:flex bottom-6"
+          style={{ insetInlineEnd: '-11.5rem' }}
           dot="cyan"
           text={
             locale === 'he'
@@ -220,10 +222,12 @@ function StatTile({
 
 function FloatingCallout({
   className = '',
+  style,
   dot,
   text,
 }: {
   className?: string;
+  style?: React.CSSProperties;
   dot: 'violet' | 'cyan';
   text: string;
 }) {
@@ -233,7 +237,8 @@ function FloatingCallout({
       : '#38BDF8';
   return (
     <div
-      className={`absolute ${className} items-center gap-2 px-3.5 py-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-soft)]/90 backdrop-blur shadow-2xl text-xs text-white/90`}
+      style={style}
+      className={`absolute ${className} items-center gap-2 px-3.5 py-2 rounded-full border border-[var(--color-border)] bg-[var(--color-bg-soft)]/90 backdrop-blur shadow-2xl text-xs text-white/90 whitespace-nowrap`}
     >
       <span
         className="w-1.5 h-1.5 rounded-full"
