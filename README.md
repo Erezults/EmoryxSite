@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emoryx — Marketing Website
 
-## Getting Started
+The marketing site for the [Emoryx](https://emoryx.erezults.com) iOS app — a local-first private vault.
 
-First, run the development server:
+## Stack
+
+- **Next.js 16** (App Router) + **TypeScript** + **Turbopack**
+- **Tailwind CSS v4**
+- **react-markdown** + remark-gfm for legal pages
+- Custom i18n (EN / HE) with RTL support
+- Edge-rendered Open Graph image (`/opengraph-image`)
+- Deployed on **Vercel** at `emoryx.erezults.com`
+
+## Develop
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev     # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Path        | Purpose                                                  |
+|-------------|----------------------------------------------------------|
+| `/`         | Landing — hero, features, pricing, trust strip, footer   |
+| `/privacy`  | Privacy Policy (EN + HE)                                 |
+| `/terms`    | Terms of Service (EN + HE)                               |
+| `/support`  | FAQ + mailto                                             |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing legal content
 
-## Learn More
+Source: `content/{privacy,terms}.{en,he}.md`
 
-To learn more about Next.js, take a look at the following resources:
+These are duplicated in the parent app repo at
+`Emoryx/docs/legal/`. Keep the EN files in sync; translate HE accordingly.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Editing copy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+UI strings live in `lib/i18n.tsx` as keyed dictionaries (`en` / `he`).
 
-## Deploy on Vercel
+## Notes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- No analytics, no cookies, no third-party trackers — by design.
+- Language toggle persists choice in `localStorage`.
+- `?lang=he` / `?lang=en` query params override and persist the choice
+  (useful for sharing direct links in either language).
+- The `opengraph-image.tsx` route renders dynamically via `next/og` (Satori)
+  — Satori does not support `conic-gradient`; use linear gradients only.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Deploy
+
+Pushes to `main` auto-deploy on Vercel.
+
+---
+
+© 2026 Erez Cohen
