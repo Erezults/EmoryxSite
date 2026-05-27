@@ -24,6 +24,10 @@
 .DS_Store
 *.pem
 
+# media sources (compressed outputs are committed instead)
+/public/screenshots/*.mov
+/public/screenshots/*.MOV
+
 # debug
 npm-debug.log*
 yarn-debug.log*

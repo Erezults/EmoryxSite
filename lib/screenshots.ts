@@ -2,25 +2,30 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
 type ScreenshotMeta = {
-  file: string;
+  stem: string;
   label: { en: string; he: string };
 };
 
+// Canonical order + labels by filename stem (extension-agnostic).
 const KNOWN: ScreenshotMeta[] = [
-  { file: 'lock.png',     label: { en: 'Lock screen',         he: 'מסך נעילה' } },
-  { file: 'home.png',     label: { en: 'Home',                he: 'מסך בית' } },
-  { file: 'folder.png',   label: { en: 'Folder',              he: 'תיקייה' } },
-  { file: 'share.png',    label: { en: 'Share Extension',     he: 'Share Extension' } },
-  { file: 'widget.png',   label: { en: 'Lock Screen widget',  he: 'Lock Screen widget' } },
-  { file: 'settings.png', label: { en: 'Settings',            he: 'הגדרות' } },
-  { file: 'import.png',   label: { en: 'Import',              he: 'ייבוא' } },
-  { file: 'icloud.png',   label: { en: 'iCloud Backup',       he: 'iCloud Backup' } },
+  { stem: 'lock',     label: { en: 'App lock',            he: 'נעילת אפליקציה' } },
+  { stem: 'password', label: { en: 'Folder password',     he: 'סיסמת תיקייה' } },
+  { stem: 'home',     label: { en: 'Home',                he: 'מסך בית' } },
+  { stem: 'folder',   label: { en: 'Folder',              he: 'תיקייה' } },
+  { stem: 'import',   label: { en: 'Import',              he: 'ייבוא' } },
+  { stem: 'share',    label: { en: 'Share Extension',     he: 'Share Extension' } },
+  { stem: 'widget',   label: { en: 'Lock Screen widget',  he: 'Lock Screen widget' } },
+  { stem: 'settings', label: { en: 'Settings',            he: 'הגדרות' } },
+  { stem: 'icloud',   label: { en: 'iCloud Backup',       he: 'iCloud Backup' } },
 ];
 
 export type ScreenshotEntry = {
   src: string;
   label: { en: string; he: string };
 };
+
+const VALID_EXT = /\.(png|jpe?g|webp|avif)$/i;
+const stemOf = (f: string) => f.replace(/\.[^.]+$/, '').toLowerCase();
 
 export async function listScreenshots(): Promise<ScreenshotEntry[]> {
   const root = path.join(process.cwd(), 'public', 'screenshots');
@@ -32,20 +37,21 @@ export async function listScreenshots(): Promise<ScreenshotEntry[]> {
   } catch {
     return out;
   }
+  const images = files.filter((f) => VALID_EXT.test(f));
+  const used = new Set<string>();
 
-  // Known files in canonical order
+  // Known stems first, in canonical order — first matching file wins.
   for (const k of KNOWN) {
-    if (files.includes(k.file)) {
-      out.push({ src: `/screenshots/${k.file}`, label: k.label });
+    const match = images.find((f) => stemOf(f) === k.stem && !used.has(f));
+    if (match) {
+      used.add(match);
+      out.push({ src: `/screenshots/${match}`, label: k.label });
     }
   }
 
-  // Any other PNG/JPG/WebP files found, appended in alpha order
-  const seen = new Set(out.map((e) => path.basename(e.src)));
-  const extras = files
-    .filter((f) => /\.(png|jpe?g|webp|avif)$/i.test(f) && !seen.has(f))
-    .sort();
-  for (const f of extras) {
+  // Any other images — appended in alpha order, label = filename stem.
+  for (const f of images.sort()) {
+    if (used.has(f)) continue;
     const stem = f.replace(/\.[^.]+$/, '');
     out.push({
       src: `/screenshots/${f}`,
