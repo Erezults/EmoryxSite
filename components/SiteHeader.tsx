@@ -11,11 +11,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-[var(--color-bg)]/70 border-b border-[var(--color-border)]">
       <div className="mx-auto max-w-6xl px-5 sm:px-8 h-16 flex items-center justify-between">
-        <Link
-          href="/"
-          className="flex items-center gap-2.5 group"
-          aria-label="Emoryx home"
-        >
+        <Link href="/" className="flex items-center gap-2.5 group">
           <EmoryxMark size={28} />
           <span className="font-display text-xl tracking-tight text-white group-hover:text-white/90 transition">
             Emoryx

@@ -103,7 +103,10 @@ function FeatureCell({
         >
           {icon}
         </span>
-        <span className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-dim)]">
+        <span
+          aria-hidden
+          className="font-mono text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-muted)]"
+        >
           0{index + 1}
         </span>
       </div>

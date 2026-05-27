@@ -30,7 +30,6 @@ export function AppStoreBadge({
         className,
       ].join(' ')}
       dir="ltr"
-      aria-label="Download on the App Store"
     >
       <AppleGlyph
         className={isPrimary ? 'text-black' : 'text-white'}

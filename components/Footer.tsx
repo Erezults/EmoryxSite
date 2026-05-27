@@ -13,11 +13,7 @@ export function Footer() {
       <div className="mx-auto max-w-6xl px-5 sm:px-8 py-14 sm:py-20">
         <div className="grid grid-cols-2 sm:grid-cols-12 gap-y-10 gap-x-8">
           <div className="col-span-2 sm:col-span-5">
-            <Link
-              href="/"
-              className="inline-flex items-center gap-2.5"
-              aria-label="Emoryx home"
-            >
+            <Link href="/" className="inline-flex items-center gap-2.5">
               <EmoryxMark size={32} />
               <span className="font-display text-2xl tracking-tight text-white">
                 Emoryx
@@ -79,9 +75,9 @@ function FooterColumn({
 }) {
   return (
     <div className={className}>
-      <h4 className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-dim)]">
+      <h3 className="text-[11px] uppercase tracking-[0.18em] text-[var(--color-text-muted)] font-semibold">
         {title}
-      </h4>
+      </h3>
       <ul className="mt-4 space-y-2 text-sm">
         {Array.isArray(children) ? (
           children.map((c, i) => (
