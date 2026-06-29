@@ -69,6 +69,14 @@ export function SupportContent() {
             {t('supportFaqTitle')}
           </h2>
           <FaqAccordion items={items} />
+          <div className="mt-8 text-center">
+            <a
+              href="/faq"
+              className="inline-flex items-center gap-1.5 text-sm text-[var(--color-text-soft)] hover:text-white transition underline underline-offset-4 decoration-[var(--color-border-strong)]"
+            >
+              {t('faqReadAll')}
+            </a>
+          </div>
         </div>
       </section>
     </>

@@ -19,6 +19,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="flex items-center gap-1 sm:gap-2">
+          <NavLink href="/faq">{t('navFaq')}</NavLink>
           <NavLink href="/privacy">{t('navPrivacy')}</NavLink>
           <NavLink href="/terms">{t('navTerms')}</NavLink>
           <NavLink href="/support">{t('navSupport')}</NavLink>

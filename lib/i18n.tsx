@@ -17,6 +17,18 @@ const en: Dict = {
   navPrivacy: 'Privacy',
   navTerms: 'Terms',
   navSupport: 'Support',
+  navFaq: 'FAQ',
+
+  // FAQ page
+  faqPageEyebrow: 'Help center',
+  faqPageTitle: 'Questions & answers',
+  faqPageSub:
+    'How Emoryx stores your files, how iCloud Sync works across your devices, and exactly what happens when you delete the app or your data.',
+  faqStillTitle: 'Still have a question?',
+  faqStillBody:
+    'There’s no call-center — just Erez, the developer who built Emoryx. Send a note, get a real reply.',
+  faqStillCta: 'Email support',
+  faqReadAll: 'Read all questions & answers →',
 
   // Hero
   heroEyebrow: 'iOS · Private vault',
@@ -129,6 +141,18 @@ const he: Dict = {
   navPrivacy: 'פרטיות',
   navTerms: 'תנאים',
   navSupport: 'תמיכה',
+  navFaq: 'שאלות נפוצות',
+
+  // FAQ page
+  faqPageEyebrow: 'מרכז עזרה',
+  faqPageTitle: 'שאלות ותשובות',
+  faqPageSub:
+    'איך Emoryx שומר את הקבצים שלך, איך סנכרון iCloud עובד בין המכשירים, ובדיוק מה קורה כשמוחקים את האפליקציה או את הנתונים.',
+  faqStillTitle: 'נשארה שאלה?',
+  faqStillBody:
+    'אין מוקד — יש את ארז, המפתח שבנה את Emoryx. שלח הודעה, קבל תשובה אמיתית.',
+  faqStillCta: 'מייל לתמיכה',
+  faqReadAll: 'לכל השאלות והתשובות →',
 
   // Hero
   heroEyebrow: 'iOS · כספת פרטית',

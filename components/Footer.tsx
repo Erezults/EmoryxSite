@@ -33,6 +33,7 @@ export function Footer() {
           </FooterColumn>
 
           <FooterColumn title={t('navSupport')} className="sm:col-span-3">
+            <Link href="/faq">{t('navFaq')}</Link>
             <Link href="/support">{t('navSupport')}</Link>
             <a
               href="mailto:emoryx.support@erezults.com"

@@ -3,10 +3,17 @@
 import { useState } from 'react';
 import { Plus } from 'lucide-react';
 
-type Item = { q: string; a: string };
+type Item = { q: string; a: string | string[] };
 
-export function FaqAccordion({ items }: { items: Item[] }) {
-  const [open, setOpen] = useState<number | null>(0);
+export function FaqAccordion({
+  items,
+  defaultOpen = 0,
+}: {
+  items: Item[];
+  /** Index open on mount, or null for all-collapsed. */
+  defaultOpen?: number | null;
+}) {
+  const [open, setOpen] = useState<number | null>(defaultOpen);
 
   return (
     <div className="rounded-3xl border border-[var(--color-border)] overflow-hidden divide-y divide-[var(--color-border)]">
@@ -43,9 +50,11 @@ export function FaqAccordion({ items }: { items: Item[] }) {
               }`}
             >
               <div className="overflow-hidden">
-                <p className="px-6 sm:px-8 pb-6 -mt-1 text-[var(--color-text-soft)] leading-relaxed max-w-3xl">
-                  {it.a}
-                </p>
+                <div className="px-6 sm:px-8 pb-6 -mt-1 text-[var(--color-text-soft)] leading-relaxed max-w-3xl space-y-3">
+                  {(Array.isArray(it.a) ? it.a : [it.a]).map((para, j) => (
+                    <p key={j}>{para}</p>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
