@@ -47,7 +47,7 @@ export function Hero() {
             style={{ animationDelay: '180ms' }}
           >
             <span className="block">{t('heroTitleA')}</span>
-            <span className="block italic gradient-text">
+            <span className="block gradient-text">
               {t('heroTitleB')}
             </span>
           </h1>

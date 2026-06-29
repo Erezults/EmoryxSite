@@ -32,7 +32,7 @@ export function FaqAccordion({
               aria-expanded={isOpen}
               className="w-full flex items-start gap-5 px-6 sm:px-8 py-6 text-start"
             >
-              <span className="flex-1 font-display text-lg sm:text-xl text-white leading-snug">
+              <span className="flex-1 font-display text-xl sm:text-2xl text-white leading-snug">
                 {it.q}
               </span>
               <span
@@ -50,7 +50,7 @@ export function FaqAccordion({
               }`}
             >
               <div className="overflow-hidden">
-                <div className="px-6 sm:px-8 pb-6 -mt-1 text-[var(--color-text-soft)] leading-relaxed max-w-3xl space-y-3">
+                <div className="px-6 sm:px-8 pb-6 -mt-1 text-lg text-[var(--color-text-soft)] leading-relaxed max-w-3xl space-y-3">
                   {(Array.isArray(it.a) ? it.a : [it.a]).map((para, j) => (
                     <p key={j}>{para}</p>
                   ))}

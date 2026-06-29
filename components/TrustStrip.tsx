@@ -28,7 +28,7 @@ export function TrustStrip() {
         {dup.map((label, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-3 font-display text-[clamp(1.6rem,2.6vw,2.4rem)] italic text-white/90 whitespace-nowrap"
+            className="inline-flex items-center gap-3 font-display text-[clamp(1.6rem,2.6vw,2.4rem)] text-white/90 whitespace-nowrap"
           >
             <span>{label}</span>
             <span

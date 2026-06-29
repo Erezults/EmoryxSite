@@ -109,7 +109,6 @@ export default async function OG() {
                 'linear-gradient(110deg, #C026D3, #7C3AED 50%, #38BDF8)',
               backgroundClip: 'text',
               color: 'transparent',
-              fontStyle: 'italic',
             }}
           >
             On your device.

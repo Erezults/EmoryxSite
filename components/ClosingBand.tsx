@@ -25,7 +25,7 @@ export function ClosingBand() {
         <div className="flex justify-center">
           <EmoryxMark size={84} withHalo />
         </div>
-        <h2 className="mt-10 font-display italic text-[clamp(2.4rem,5.4vw,4.8rem)] leading-[1.05] tracking-tight text-white">
+        <h2 className="mt-10 font-display text-[clamp(2.4rem,5.4vw,4.8rem)] leading-[1.05] tracking-tight text-white">
           {t('closingTitle')}
         </h2>
         <p className="mt-5 text-lg text-[var(--color-text-soft)]">

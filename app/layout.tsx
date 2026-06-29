@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import {
-  Instrument_Serif,
+  Space_Grotesk,
   Geist,
   Geist_Mono,
-  Frank_Ruhl_Libre,
+  Rubik,
   Assistant,
 } from 'next/font/google';
 import './globals.css';
@@ -11,10 +11,8 @@ import { I18nProvider } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { Footer } from '@/components/Footer';
 
-const instrumentSerif = Instrument_Serif({
+const spaceGrotesk = Space_Grotesk({
   variable: '--font-display',
-  weight: '400',
-  style: ['normal', 'italic'],
   subsets: ['latin'],
   display: 'swap',
 });
@@ -31,9 +29,8 @@ const geistMono = Geist_Mono({
   display: 'swap',
 });
 
-const frankRuhl = Frank_Ruhl_Libre({
+const rubik = Rubik({
   variable: '--font-display-he',
-  weight: ['400', '500', '700'],
   subsets: ['hebrew', 'latin'],
   display: 'swap',
 });
@@ -115,10 +112,10 @@ export default function RootLayout({
       dir="ltr"
       suppressHydrationWarning
       className={[
-        instrumentSerif.variable,
+        spaceGrotesk.variable,
         geistSans.variable,
         geistMono.variable,
-        frankRuhl.variable,
+        rubik.variable,
         assistant.variable,
         'h-full antialiased',
       ].join(' ')}

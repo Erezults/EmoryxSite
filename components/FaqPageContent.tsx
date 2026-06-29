@@ -28,10 +28,10 @@ export function FaqPageContent() {
             <span className="dot" />
             <span>{t('faqPageEyebrow')}</span>
           </span>
-          <h1 className="mt-8 font-display text-[clamp(2.4rem,5.4vw,4.6rem)] leading-[1.05] tracking-tight text-white">
+          <h1 className="mt-8 font-display text-[clamp(2.9rem,6.2vw,5.2rem)] leading-[1.05] tracking-tight text-white">
             {t('faqPageTitle')}
           </h1>
-          <p className="mt-5 text-base sm:text-lg text-[var(--color-text-soft)] max-w-xl mx-auto leading-relaxed">
+          <p className="mt-6 text-lg sm:text-xl text-[var(--color-text-soft)] max-w-2xl mx-auto leading-relaxed">
             {t('faqPageSub')}
           </p>
         </div>
@@ -45,7 +45,7 @@ export function FaqPageContent() {
               <a
                 key={cat.id}
                 href={`#${cat.id}`}
-                className="rounded-full border border-[var(--color-border)] px-4 py-1.5 text-sm text-[var(--color-text-soft)] hover:text-white hover:border-white/30 transition"
+                className="rounded-full border border-[var(--color-border)] px-4 py-2 text-sm sm:text-base text-[var(--color-text-soft)] hover:text-white hover:border-white/30 transition"
               >
                 {cat.title[locale]}
               </a>
@@ -59,7 +59,7 @@ export function FaqPageContent() {
         <div className="mx-auto max-w-3xl px-5 sm:px-8 space-y-16">
           {faqCategories.map((cat) => (
             <div key={cat.id} id={cat.id} className="scroll-mt-24">
-              <h2 className="font-display text-2xl sm:text-3xl tracking-tight text-white mb-6">
+              <h2 className="font-display text-3xl sm:text-4xl tracking-tight text-white mb-6">
                 {cat.title[locale]}
               </h2>
               <FaqAccordion
