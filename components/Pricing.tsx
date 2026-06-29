@@ -26,8 +26,7 @@ export function Pricing() {
         <div className="mt-14 grid grid-cols-1 lg:grid-cols-2 gap-5">
           <PlanCard
             title={t('priceFreeTitle')}
-            price={t('priceFreePrice')}
-            unit={t('priceFreeUnit')}
+            tagline={t('priceFreeTagline')}
             bullets={[
               t('priceFreeBullet1'),
               t('priceFreeBullet2'),
@@ -39,10 +38,7 @@ export function Pricing() {
           />
           <PlanCard
             title={t('pricePremiumTitle')}
-            price={t('pricePremiumPrice')}
-            unit={t('pricePremiumUnit')}
-            badge={t('pricePremiumBadge')}
-            note={`${t('pricePremiumNoteY')} · ${t('pricePremiumNoteL')}`}
+            tagline={t('pricePremiumTagline')}
             bullets={[
               t('pricePremiumBullet1'),
               t('pricePremiumBullet2'),
@@ -65,28 +61,21 @@ export function Pricing() {
 
 function PlanCard({
   title,
-  price,
-  unit,
+  tagline,
   bullets,
   cta,
-  badge,
-  note,
   featured,
 }: {
   title: string;
-  price: string;
-  unit: string;
+  tagline: string;
   bullets: string[];
   cta: string;
-  badge?: string;
-  note?: string;
   featured?: boolean;
 }) {
-  const ctaHref = APP_STORE_URL;
   return (
     <div
       className={[
-        'relative rounded-3xl p-8 sm:p-10',
+        'relative rounded-3xl p-8 sm:p-10 flex flex-col',
         featured
           ? 'bg-gradient-to-br from-[#1a0f2e] via-[#0F0F14] to-[#0a0f1e] border border-[#7C3AED]/30'
           : 'bg-[var(--color-bg-elev)] border border-[var(--color-border)]',
@@ -115,37 +104,14 @@ function PlanCard({
         </>
       )}
 
-      <div className="relative flex items-start justify-between">
-        <h3
-          className={`font-display text-2xl sm:text-3xl tracking-tight ${
-            featured ? 'text-white' : 'text-white'
-          }`}
-        >
+      <div className="relative">
+        <h3 className="font-display text-[clamp(2.2rem,4vw,3rem)] leading-none tracking-tight text-white">
           {title}
         </h3>
-        {badge && (
-          <span className="text-[10px] uppercase tracking-[0.16em] px-2.5 py-1 rounded-full border border-[#7C3AED]/40 text-[#C4B5FD] bg-[#7C3AED]/10">
-            {badge}
-          </span>
-        )}
+        <p className="mt-3 text-sm text-[var(--color-text-soft)]">{tagline}</p>
       </div>
 
-      <div className="relative mt-6 flex items-end gap-2">
-        <span className="font-display text-[clamp(2.75rem,6vw,4.5rem)] leading-none text-white tracking-tight">
-          {price}
-        </span>
-        <span className="pb-2 text-sm text-[var(--color-text-muted)]">
-          / {unit}
-        </span>
-      </div>
-
-      {note && (
-        <p className="relative mt-2 text-xs text-[var(--color-text-muted)]">
-          {note}
-        </p>
-      )}
-
-      <ul className="relative mt-8 space-y-3">
+      <ul className="relative mt-8 space-y-3 flex-1">
         {bullets.map((b, i) => (
           <li
             key={i}
@@ -166,7 +132,7 @@ function PlanCard({
       </ul>
 
       <a
-        href={ctaHref}
+        href={APP_STORE_URL}
         target="_blank"
         rel="noopener noreferrer"
         className={[

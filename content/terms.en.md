@@ -118,8 +118,7 @@ with notice in the App or on the Website.
 The App offers in-app purchases through Apple's StoreKit:
 
 - **Premium Monthly Subscription** — auto-renewing monthly subscription
-- **Premium Yearly Subscription** — auto-renewing yearly subscription, may
-  include a 7-day free trial for new subscribers
+- **Premium Yearly Subscription** — auto-renewing yearly subscription
 - **Lifetime Access** — one-time non-consumable purchase
 
 Current prices, features, and trial terms are displayed in the App at the
