@@ -44,7 +44,7 @@ export default async function OG() {
               display: 'block',
             }}
           />
-          <span>EMORYX · iOS</span>
+          <span>EMORYX · iOS &amp; MAC</span>
         </div>
 
         {/* big logo + name */}

@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     template: '%s · Emoryx',
   },
   description:
-    'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud backup. iOS only.',
+    'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud sync. For iPhone, iPad and Mac.',
   applicationName: 'Emoryx',
   authors: [{ name: 'Erez Cohen' }],
   creator: 'Erez Cohen',
@@ -64,9 +64,10 @@ export const metadata: Metadata = {
     'private vault',
     'photo vault',
     'iOS',
+    'Mac',
     'Face ID',
     'encrypted',
-    'iCloud backup',
+    'iCloud sync',
     'privacy',
     'Emoryx',
   ],
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Emoryx — Your private vault. On your device.',
     description:
-      'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud backup.',
+      'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud sync.',
     url: siteUrl,
     siteName: 'Emoryx',
     locale: 'en_US',
@@ -90,7 +91,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Emoryx — Your private vault. On your device.',
     description:
-      'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud backup.',
+      'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud sync.',
   },
   icons: {
     icon: '/icon.png',

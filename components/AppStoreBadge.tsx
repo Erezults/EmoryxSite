@@ -1,6 +1,7 @@
 'use client';
 
 import { useI18n } from '@/lib/i18n';
+import { APP_STORE_URL } from '@/lib/appStore';
 
 type Props = {
   href?: string;
@@ -9,7 +10,7 @@ type Props = {
 };
 
 export function AppStoreBadge({
-  href = '#',
+  href = APP_STORE_URL,
   variant = 'primary',
   className = '',
 }: Props) {
@@ -22,6 +23,8 @@ export function AppStoreBadge({
   return (
     <a
       href={href}
+      target="_blank"
+      rel="noopener noreferrer"
       className={[
         'appstore-sheen inline-flex items-center gap-3 rounded-2xl px-5 py-3 transition-transform duration-300',
         isPrimary

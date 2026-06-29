@@ -31,11 +31,11 @@ const en: Dict = {
   faqReadAll: 'Read all questions & answers →',
 
   // Hero
-  heroEyebrow: 'iOS · Private vault',
+  heroEyebrow: 'iOS & Mac · Private vault',
   heroTitleA: 'Your private vault.',
   heroTitleB: 'On your device.',
   heroSub:
-    'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud backup.',
+    'Hide photos, videos, and documents behind Face ID. Local-first, end-to-end encrypted, optional iCloud sync across your devices.',
   heroCtaPrimary: 'Download on the App Store',
   heroCtaSecondary: 'How it works',
 
@@ -45,9 +45,9 @@ const en: Dict = {
   feat1Title: 'Encrypted by default',
   feat1Body:
     'AES-GCM encryption with a key derived from your password. Your data never leaves your device unless you say so.',
-  feat2Title: 'iCloud Backup, optional',
+  feat2Title: 'iCloud Sync, optional',
   feat2Body:
-    "End-to-end encrypted iCloud backup. Apple can't read your vault. Neither can we. Only your iCloud Backup Password decrypts it.",
+    "End-to-end encrypted iCloud sync keeps your iPhone, iPad and Mac in step. Apple can't read your vault. Neither can we. Only your iCloud Backup Password decrypts it.",
   feat3Title: 'Lock Screen widget & Share Extension',
   feat3Body:
     'Capture straight from the Lock Screen. Share into Emoryx from any app on iOS — photos, files, links.',
@@ -84,7 +84,7 @@ const en: Dict = {
 
   // Trust strip
   trust1: 'Made in Israel',
-  trust2: 'iOS only',
+  trust2: 'iPhone · iPad · Mac',
   trust3: 'No accounts',
   trust4: 'No tracking',
   trust5: 'Open about privacy',
@@ -114,10 +114,10 @@ const en: Dict = {
     "No. The iCloud backup is encrypted with a separate password that only you know. Apple stores the encrypted blob but cannot read it; we never receive it. There is no recovery mechanism.",
   faq3Q: 'What happens when I delete the app?',
   faq3A:
-    "iOS deletes the entire sandboxed storage. The next time you install, it's a fresh start — unless you had iCloud Backup enabled and remember your iCloud Backup Password, in which case you can restore.",
+    "iOS deletes the entire on-device storage. If iCloud Sync was on, your encrypted data stays in your private iCloud — reinstall on any device, turn on iCloud Sync and enter your iCloud Backup Password to get it all back. If sync was off, it's a fresh start.",
   faq4Q: 'Does Emoryx see my photos?',
   faq4A:
-    "No. Emoryx has no servers and collects no data. Your photos never leave your device unless you enable iCloud Backup, in which case they go to your own iCloud account, encrypted, before upload.",
+    "No. Emoryx has no servers and collects no data. Your photos never leave your device unless you enable iCloud Sync, in which case they go to your own iCloud account, encrypted, before they ever leave the device.",
   faq5Q: 'Can I share my Premium subscription with my family?',
   faq5A:
     "Yes — Family Sharing is supported via Apple's standard mechanism. Up to 6 family members can share Premium access. Each family member's vault content remains private to their device.",
@@ -155,11 +155,11 @@ const he: Dict = {
   faqReadAll: 'לכל השאלות והתשובות →',
 
   // Hero
-  heroEyebrow: 'iOS · כספת פרטית',
+  heroEyebrow: 'iOS ו-Mac · כספת פרטית',
   heroTitleA: 'הכספת הפרטית שלך.',
   heroTitleB: 'במכשיר שלך.',
   heroSub:
-    'הסתר תמונות, סרטונים ומסמכים מאחורי Face ID. מקומי-קודם, מוצפן מקצה-לקצה, גיבוי iCloud אופציונלי.',
+    'הסתר תמונות, סרטונים ומסמכים מאחורי Face ID. מקומי-קודם, מוצפן מקצה-לקצה, סנכרון iCloud אופציונלי בין המכשירים.',
   heroCtaPrimary: 'הורד מה-App Store',
   heroCtaSecondary: 'איך זה עובד',
 
@@ -169,9 +169,9 @@ const he: Dict = {
   feat1Title: 'מוצפן כברירת מחדל',
   feat1Body:
     'הצפנת AES-GCM עם מפתח שנגזר מהסיסמה שלך. המידע שלך לא יוצא מהמכשיר אלא אם אתה אומר.',
-  feat2Title: 'גיבוי iCloud, אופציונלי',
+  feat2Title: 'סנכרון iCloud, אופציונלי',
   feat2Body:
-    'גיבוי iCloud מוצפן מקצה-לקצה. אפילו Apple לא יכולה לקרוא את הכספת שלך. וגם אנחנו לא. רק סיסמת הגיבוי שלך מפענחת.',
+    'סנכרון iCloud מוצפן מקצה-לקצה שומר על ה-iPhone, ה-iPad וה-Mac שלך מתואמים. אפילו Apple לא יכולה לקרוא את הכספת. וגם אנחנו לא. רק סיסמת ה-iCloud Backup שלך מפענחת.',
   feat3Title: 'Lock Screen widget ו-Share Extension',
   feat3Body:
     'צלם ישירות מ-Lock Screen. שתף לתוך Emoryx מכל אפליקציה ב-iOS — תמונות, קבצים, קישורים.',
@@ -194,8 +194,8 @@ const he: Dict = {
   pricePremiumTitle: 'Premium',
   pricePremiumPrice: '₪14.90',
   pricePremiumUnit: 'לחודש',
-  pricePremiumNoteY: 'או ₪149/שנה — חסוך 17%',
-  pricePremiumNoteL: 'או ₪299 חד-פעמי, לכל החיים',
+  pricePremiumNoteY: 'או ₪149.90/שנה — חסוך 17%',
+  pricePremiumNoteL: 'או ₪299.90 חד-פעמי, לכל החיים',
   pricePremiumBullet1: 'תיקיות וקבצים ללא הגבלה',
   pricePremiumBullet2: 'סנכרון iCloud מוצפן מקצה-לקצה',
   pricePremiumBullet3: 'ייבוא, העברה ומחיקה גורפים',
@@ -208,7 +208,7 @@ const he: Dict = {
 
   // Trust
   trust1: 'תוצרת ישראל',
-  trust2: 'iOS בלבד',
+  trust2: 'iPhone · iPad · Mac',
   trust3: 'בלי חשבונות',
   trust4: 'בלי tracking',
   trust5: 'גלוי לגבי פרטיות',
@@ -238,10 +238,10 @@ const he: Dict = {
     'לא. גיבוי ה-iCloud מוצפן עם סיסמה נפרדת שרק אתה יודע. Apple מאחסנת את ה-blob המוצפן אבל לא יכולה לקרוא אותו; אנחנו לעולם לא מקבלים אותו. אין מנגנון שחזור.',
   faq3Q: 'מה קורה כשמוחקים את האפליקציה?',
   faq3A:
-    'iOS מוחק את כל ה-storage המבודד. בפעם הבאה שתתקין, זו התחלה חדשה — אלא אם הפעלת iCloud Backup וזוכר את סיסמת הגיבוי, ואז אפשר לשחזר.',
+    'iOS מוחק את כל האחסון המקומי. אם סנכרון iCloud היה דלוק, הנתונים המוצפנים נשארים ב-iCloud הפרטי שלך — התקן מחדש בכל מכשיר, הדלק סנכרון iCloud והזן את סיסמת ה-iCloud Backup כדי לקבל את הכל בחזרה. אם הסנכרון היה כבוי, זו התחלה חדשה.',
   faq4Q: 'האם Emoryx רואה את התמונות שלי?',
   faq4A:
-    'לא. ל-Emoryx אין שרתים והוא לא אוסף מידע. התמונות שלך לעולם לא יוצאות מהמכשיר אלא אם אתה מפעיל iCloud Backup, ואז הן הולכות לחשבון ה-iCloud שלך, מוצפנות, לפני ההעלאה.',
+    'לא. ל-Emoryx אין שרתים והוא לא אוסף מידע. התמונות שלך לעולם לא יוצאות מהמכשיר אלא אם אתה מפעיל סנכרון iCloud, ואז הן הולכות לחשבון ה-iCloud שלך, מוצפנות, עוד לפני שהן עוזבות את המכשיר.',
   faq5Q: 'אפשר לחלוק את מנוי ה-Premium עם המשפחה?',
   faq5A:
     'כן — Family Sharing נתמך דרך המנגנון הסטנדרטי של Apple. עד 6 בני משפחה יכולים לחלוק גישת Premium. תוכן הכספת של כל בן משפחה נשאר פרטי במכשיר שלו.',

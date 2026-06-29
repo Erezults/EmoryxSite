@@ -2,6 +2,7 @@
 
 import { useI18n } from '@/lib/i18n';
 import { Check } from 'lucide-react';
+import { APP_STORE_URL } from '@/lib/appStore';
 
 export function Pricing() {
   const { t } = useI18n();
@@ -81,6 +82,7 @@ function PlanCard({
   note?: string;
   featured?: boolean;
 }) {
+  const ctaHref = APP_STORE_URL;
   return (
     <div
       className={[
@@ -164,7 +166,9 @@ function PlanCard({
       </ul>
 
       <a
-        href="#"
+        href={ctaHref}
+        target="_blank"
+        rel="noopener noreferrer"
         className={[
           'relative mt-10 inline-flex items-center justify-center w-full rounded-2xl py-3.5 text-sm font-semibold transition',
           featured

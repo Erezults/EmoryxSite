@@ -44,7 +44,7 @@ export function Footer() {
             </a>
           </FooterColumn>
 
-          <FooterColumn title="iOS" className="sm:col-span-2">
+          <FooterColumn title="App" className="sm:col-span-2">
             <a href="#features">
               {t('feat1Title').split(' ').slice(0, 2).join(' ')}
             </a>
