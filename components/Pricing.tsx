@@ -27,6 +27,8 @@ export function Pricing() {
           <PlanCard
             title={t('priceFreeTitle')}
             tagline={t('priceFreeTagline')}
+            price={t('priceFreePrice')}
+            unit={t('priceFreeUnit')}
             bullets={[
               t('priceFreeBullet1'),
               t('priceFreeBullet2'),
@@ -39,6 +41,9 @@ export function Pricing() {
           <PlanCard
             title={t('pricePremiumTitle')}
             tagline={t('pricePremiumTagline')}
+            price={t('pricePremiumPrice')}
+            unit={t('pricePremiumUnit')}
+            note={`${t('pricePremiumNoteY')} · ${t('pricePremiumNoteL')}`}
             bullets={[
               t('pricePremiumBullet1'),
               t('pricePremiumBullet2'),
@@ -62,12 +67,18 @@ export function Pricing() {
 function PlanCard({
   title,
   tagline,
+  price,
+  unit,
+  note,
   bullets,
   cta,
   featured,
 }: {
   title: string;
   tagline: string;
+  price: string;
+  unit: string;
+  note?: string;
   bullets: string[];
   cta: string;
   featured?: boolean;
@@ -105,11 +116,26 @@ function PlanCard({
       )}
 
       <div className="relative">
-        <h3 className="font-display text-[clamp(2.2rem,4vw,3rem)] leading-none tracking-tight text-white">
+        <h3 className="font-display text-2xl sm:text-3xl tracking-tight text-white">
           {title}
         </h3>
         <p className="mt-3 text-sm text-[var(--color-text-soft)]">{tagline}</p>
       </div>
+
+      <div className="relative mt-6 flex items-end gap-2">
+        <span className="font-display text-[clamp(2.75rem,6vw,4.5rem)] leading-none text-white tracking-tight">
+          {price}
+        </span>
+        <span className="pb-2 text-sm text-[var(--color-text-muted)]">
+          / {unit}
+        </span>
+      </div>
+
+      {note && (
+        <p className="relative mt-2 text-xs text-[var(--color-text-muted)]">
+          {note}
+        </p>
+      )}
 
       <ul className="relative mt-8 space-y-3 flex-1">
         {bullets.map((b, i) => (

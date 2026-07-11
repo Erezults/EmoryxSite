@@ -55,19 +55,25 @@ const en: Dict = {
   feat4Body:
     "We don't operate servers. We don't have an accounts system. We can't see your data — even if we wanted to.",
 
-  // Plans
-  pricingEyebrow: 'Plans',
+  // Pricing
+  pricingEyebrow: 'Simple pricing',
   pricingTitle: 'Free to start. Premium when you need more.',
   priceFreeTitle: 'Free',
   priceFreeTagline: 'The essentials, on one device.',
+  priceFreePrice: '$0',
+  priceFreeUnit: 'forever',
   priceFreeBullet1: 'Up to 5 folders',
   priceFreeBullet2: 'Up to 100 files',
   priceFreeBullet3: 'Local-only storage',
   priceFreeBullet4: 'Face ID lock + per-folder password',
   priceFreeBullet5: 'Share Extension + Lock Screen widget',
-  priceFreeCta: 'Get Emoryx',
+  priceFreeCta: 'Start free',
   pricePremiumTitle: 'Premium',
   pricePremiumTagline: 'Everything unlocked, across your devices.',
+  pricePremiumPrice: '$3.99',
+  pricePremiumUnit: 'per month',
+  pricePremiumNoteY: 'or $39.99/year — save 16%',
+  pricePremiumNoteL: 'or $79.99 one-time, lifetime',
   pricePremiumBullet1: 'Unlimited folders & files',
   pricePremiumBullet2: 'End-to-end encrypted iCloud sync',
   pricePremiumBullet3: 'Bulk import, move, delete',
@@ -75,7 +81,7 @@ const en: Dict = {
   pricePremiumBullet5: 'Decoy vault — a second password for emergencies',
   pricePremiumCta: 'Get Emoryx',
   pricingFooterNote:
-    'Free and Premium are available on the App Store. See plan details there. Manage or cancel anytime in Settings.',
+    'Prices shown in USD; local App Store pricing may vary. Subscriptions auto-renew via Apple. Cancel anytime in iOS Settings. See Terms for details.',
 
   // Trust strip
   trust1: 'Made in Israel',
@@ -174,19 +180,25 @@ const he: Dict = {
   feat4Body:
     'אנחנו לא מפעילים שרתים. אין לנו מערכת חשבונות. אנחנו לא יכולים לראות את המידע שלך — גם אם היינו רוצים.',
 
-  // Plans
-  pricingEyebrow: 'תוכניות',
+  // Pricing
+  pricingEyebrow: 'תמחור פשוט',
   pricingTitle: 'התחל חינם. Premium כשתצטרך יותר.',
   priceFreeTitle: 'חינם',
   priceFreeTagline: 'הבסיס, על מכשיר אחד.',
+  priceFreePrice: '₪0',
+  priceFreeUnit: 'לתמיד',
   priceFreeBullet1: 'עד 5 תיקיות',
   priceFreeBullet2: 'עד 100 קבצים',
   priceFreeBullet3: 'אחסון מקומי בלבד',
   priceFreeBullet4: 'נעילה ב-Face ID + סיסמה לכל תיקייה',
   priceFreeBullet5: 'Share Extension + Lock Screen widget',
-  priceFreeCta: 'הורד את Emoryx',
+  priceFreeCta: 'התחל חינם',
   pricePremiumTitle: 'Premium',
   pricePremiumTagline: 'הכול פתוח, בכל המכשירים.',
+  pricePremiumPrice: '₪14.90',
+  pricePremiumUnit: 'לחודש',
+  pricePremiumNoteY: 'או ₪149.90/שנה — חיסכון של 16%',
+  pricePremiumNoteL: 'או ₪299.90 חד-פעמי, לכל החיים',
   pricePremiumBullet1: 'תיקיות וקבצים ללא הגבלה',
   pricePremiumBullet2: 'סנכרון iCloud מוצפן מקצה-לקצה',
   pricePremiumBullet3: 'ייבוא, העברה ומחיקה גורפים',
@@ -194,7 +206,7 @@ const he: Dict = {
   pricePremiumBullet5: 'כספת מסווה — סיסמה שנייה לשעת חירום',
   pricePremiumCta: 'הורד את Emoryx',
   pricingFooterNote:
-    'התוכניות Free ו-Premium זמינות ב-App Store — פרטי התוכניות מוצגים שם. ניתן לנהל או לבטל בכל עת בהגדרות.',
+    'המחירים בש״ח; המחיר בפועל נקבע ב-App Store לפי המדינה. מנויים מתחדשים אוטומטית דרך Apple. ניתן לבטל בכל עת ב-iOS Settings. ראה תנאים לפרטים.',
 
   // Trust
   trust1: 'תוצרת ישראל',
