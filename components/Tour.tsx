@@ -3,26 +3,23 @@
 import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { useI18n } from '@/lib/i18n';
+import type { TourTiles } from '@/lib/screenshots';
 
 type Props = {
   hasVideo: boolean;
+  // Pre-rendered marketing tiles (device frame + gradient + caption baked in),
+  // resolved at build time from public/tour/<locale>/ with cross-locale
+  // fallback so both languages show the same complete set (see lib/screenshots).
+  tiles: TourTiles;
 };
 
-// Pre-rendered marketing tiles (device frame + gradient + caption baked in),
-// localized per language. Files live in public/tour/<locale>/<stem>.webp.
-// Each locale shows its own complete set — captions are already in the right language.
-const TILES: Record<'en' | 'he', string[]> = {
-  en: ['01-vault-home', '02-lock-pin', '03-folder-detail', '04-new-folder', '06-media-viewer', '08-share', '09-widget'],
-  he: ['02-lock-pin', '03-folder-detail', '04-new-folder', '05-import', '07-settings', '09-widget'],
-};
-
-export function Tour({ hasVideo }: Props) {
+export function Tour({ hasVideo, tiles: allTiles }: Props) {
   const { locale, dir } = useI18n();
   const trackRef = useRef<HTMLDivElement>(null);
   const [showLeftFade, setShowLeftFade] = useState(false);
   const [showRightFade, setShowRightFade] = useState(true);
 
-  const tiles = TILES[locale] ?? TILES.en;
+  const tiles = allTiles[locale] ?? allTiles.en;
 
   const onScroll = () => {
     const el = trackRef.current;
@@ -139,13 +136,13 @@ export function Tour({ hasVideo }: Props) {
             scrollbarColor: 'rgba(255,255,255,0.18) transparent',
           }}
         >
-          {tiles.map((stem, i) => (
+          {tiles.map(({ stem, src }, i) => (
             <div
               key={stem}
               className="snap-center shrink-0 relative w-[248px] sm:w-[300px] aspect-[1320/2868] rounded-[26px] overflow-hidden border border-[var(--color-border)] shadow-[0_40px_80px_-30px_rgba(0,0,0,0.7)]"
             >
               <Image
-                src={`/tour/${locale}/${stem}.webp`}
+                src={src}
                 alt={
                   locale === 'he'
                     ? `צילום מסך של Emoryx ${i + 1}`
