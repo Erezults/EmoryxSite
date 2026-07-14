@@ -30,6 +30,7 @@ export function Footer() {
           <FooterColumn title={t('navPrivacy')} className="sm:col-span-2">
             <Link href="/privacy">{t('navPrivacy')}</Link>
             <Link href="/terms">{t('navTerms')}</Link>
+            <Link href="/accessibility">{t('navAccessibility')}</Link>
           </FooterColumn>
 
           <FooterColumn title={t('navSupport')} className="sm:col-span-3">

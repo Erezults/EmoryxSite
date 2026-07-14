@@ -18,12 +18,13 @@ export function SiteHeader() {
           </span>
         </Link>
 
-        <nav className="flex items-center gap-1 sm:gap-2">
+        <nav className="flex items-center gap-0.5 sm:gap-2 overflow-x-auto flex-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
           <NavLink href="/faq">{t('navFaq')}</NavLink>
           <NavLink href="/privacy">{t('navPrivacy')}</NavLink>
           <NavLink href="/terms">{t('navTerms')}</NavLink>
+          <NavLink href="/accessibility">{t('navAccessibility')}</NavLink>
           <NavLink href="/support">{t('navSupport')}</NavLink>
-          <span className="mx-1 sm:mx-2 h-5 w-px bg-[var(--color-border)]" />
+          <span className="mx-1 sm:mx-2 h-5 w-px shrink-0 bg-[var(--color-border)]" />
           <LanguageToggle compact />
         </nav>
       </div>
@@ -41,7 +42,7 @@ function NavLink({
   return (
     <Link
       href={href}
-      className="px-2.5 sm:px-3 py-1.5 text-sm text-[var(--color-text-muted)] hover:text-white transition rounded-md hover:bg-white/[0.04]"
+      className="shrink-0 px-2 sm:px-3 py-1.5 text-xs sm:text-sm text-[var(--color-text-muted)] hover:text-white transition rounded-md hover:bg-white/[0.04]"
     >
       {children}
     </Link>
