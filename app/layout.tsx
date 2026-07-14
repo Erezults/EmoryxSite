@@ -10,6 +10,7 @@ import './globals.css';
 import { I18nProvider } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { Footer } from '@/components/Footer';
+import { SkipLink } from '@/components/SkipLink';
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-display',
@@ -123,9 +124,12 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col bg-bg text-text">
         <I18nProvider>
+          <SkipLink />
           <div className="relative flex min-h-full flex-1 flex-col">
             <SiteHeader />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1">
+              {children}
+            </main>
             <Footer />
           </div>
         </I18nProvider>

@@ -13,6 +13,10 @@ export type Locale = 'en' | 'he';
 type Dict = Record<string, string | string[] | Array<Record<string, string>>>;
 
 const en: Dict = {
+  // Accessibility
+  skipToContent: 'Skip to content',
+  navAccessibility: 'Accessibility',
+
   // Nav
   navPrivacy: 'Privacy',
   navTerms: 'Terms',
@@ -138,6 +142,10 @@ const en: Dict = {
 };
 
 const he: Dict = {
+  // Accessibility
+  skipToContent: 'דלג לתוכן',
+  navAccessibility: 'נגישות',
+
   // Nav
   navPrivacy: 'פרטיות',
   navTerms: 'תנאים',
