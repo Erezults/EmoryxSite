@@ -11,6 +11,7 @@ import { I18nProvider } from '@/lib/i18n';
 import { SiteHeader } from '@/components/SiteHeader';
 import { Footer } from '@/components/Footer';
 import { SkipLink } from '@/components/SkipLink';
+import { AccessibilityWidget } from '@/components/AccessibilityWidget';
 
 const spaceGrotesk = Space_Grotesk({
   variable: '--font-display',
@@ -132,6 +133,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
+          <AccessibilityWidget />
         </I18nProvider>
       </body>
     </html>

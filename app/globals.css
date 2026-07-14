@@ -348,3 +348,25 @@ html[dir="rtl"] .prose-legal blockquote {
   }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* ---------- accessibility widget: text size ---------- */
+html[data-a11y-text="lg"] { font-size: 112.5%; }
+html[data-a11y-text="xl"] { font-size: 125%; }
+
+/* ---------- accessibility widget: high contrast ---------- */
+html[data-a11y-contrast="high"] {
+  --color-text-soft: #FFFFFF;
+  --color-text-muted: #F2F2F2;
+  --color-text-dim: #E5E5E5;
+  --color-border: rgba(255, 255, 255, 0.4);
+  --color-border-strong: rgba(255, 255, 255, 0.6);
+}
+
+/* ---------- accessibility widget: stop animations ---------- */
+html[data-a11y-motion="reduce"] *,
+html[data-a11y-motion="reduce"] *::before,
+html[data-a11y-motion="reduce"] *::after {
+  animation: none !important;
+  transition: none !important;
+}
+html[data-a11y-motion="reduce"] .reveal { opacity: 1; transform: none; }

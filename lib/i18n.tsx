@@ -16,6 +16,17 @@ const en: Dict = {
   // Accessibility
   skipToContent: 'Skip to content',
   navAccessibility: 'Accessibility',
+  a11yWidgetTitle: 'Accessibility options',
+  a11yClose: 'Close',
+  a11yTextSize: 'Text size',
+  a11ySizeBase: 'Default',
+  a11ySizeLarge: 'Large',
+  a11ySizeXLarge: 'X-Large',
+  a11yContrast: 'High contrast',
+  a11yStopAnimations: 'Stop animations',
+  a11yOn: 'On',
+  a11yOff: 'Off',
+  a11yReset: 'Reset to default',
 
   // Nav
   navPrivacy: 'Privacy',
@@ -145,6 +156,17 @@ const he: Dict = {
   // Accessibility
   skipToContent: 'דלג לתוכן',
   navAccessibility: 'נגישות',
+  a11yWidgetTitle: 'אפשרויות נגישות',
+  a11yClose: 'סגור',
+  a11yTextSize: 'גודל טקסט',
+  a11ySizeBase: 'ברירת מחדל',
+  a11ySizeLarge: 'גדול',
+  a11ySizeXLarge: 'גדול מאוד',
+  a11yContrast: 'ניגודיות גבוהה',
+  a11yStopAnimations: 'עצירת אנימציות',
+  a11yOn: 'פעיל',
+  a11yOff: 'כבוי',
+  a11yReset: 'איפוס לברירת מחדל',
 
   // Nav
   navPrivacy: 'פרטיות',
