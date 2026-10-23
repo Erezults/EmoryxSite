@@ -93,11 +93,11 @@ export function Hero() {
                 : 'iOS 16 and later'}
             </span>
             <span aria-hidden className="opacity-50">·</span>
-            <span>
+            <a href={APP_STORE_URL} className="underline-offset-2 hover:underline">
               {locale === 'he'
-                ? 'גרסה 1.10 · בדרך ל-App Store'
-                : 'v1.10 · coming to the App Store'}
-            </span>
+                ? 'זמין ב-App Store'
+                : 'Available on the App Store'}
+            </a>
           </div>
         </div>
 
