@@ -1,6 +1,6 @@
 import { ImageResponse } from 'next/og';
 
-export const runtime = 'edge';
+export const dynamic = 'force-static';
 export const alt = 'Emoryx — Your private vault. On your device.';
 export const contentType = 'image/png';
 export const size = { width: 1200, height: 630 };
