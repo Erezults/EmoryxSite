@@ -3,6 +3,7 @@
 import { useI18n } from '@/lib/i18n';
 import { EmoryxMark } from './EmoryxMark';
 import { AppStoreBadge } from './AppStoreBadge';
+import { APP_STORE_URL } from '@/lib/appStore';
 import { ShieldCheck } from 'lucide-react';
 
 export function Hero() {
